@@ -747,6 +747,14 @@ footer .footer .menu .nav hr {
     gap: 0;
     justify-content: space-between;
   }
+  .contactWrapper {
+    padding-left: 0;
+    justify-content: space-between;
+  }
+  .illustrationWrapper {
+    gap: 0;
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 1600px) {
   header .header {
@@ -781,6 +789,15 @@ footer .footer .menu .nav hr {
   .fitframeWrapper .fitframe {
     width: 1110px;
   }
+  .illustrationWrapper .illustration {
+    padding: 61px 70px 62px 80px;
+  }
+  .illustrationWrapper .illustration img:not(.blocked) {
+    height: 400px;
+  }
+  footer {
+    padding: 45px 80px;
+  }
   .medicalWrapper .medical {
     gap: 0;
     justify-content: space-between;
@@ -790,6 +807,9 @@ footer .footer .menu .nav hr {
   }
   .medicalWrapper .medical img:nth-child(3) {
     height: 450px;
+  }
+  footer .footer .stroke {
+    width: 100%;
   }
   .medicalWrapper {
     margin-top: 100px;

@@ -895,7 +895,15 @@ footer {
         justify-content: space-between;
     }
 
-    
+    .contactWrapper {
+        padding-left: 0;
+        justify-content: space-between;
+    }
+
+    .illustrationWrapper {
+        gap: 0;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -944,6 +952,18 @@ footer {
         width: 1110px;
     }
 
+    .illustrationWrapper .illustration {
+        padding: 61px 70px 62px 80px;
+
+        img:not(.blocked) {
+            height: 400px;
+        }
+    }
+
+    footer {
+        padding: 45px 80px;
+    }
+
     .medicalWrapper .medical {
         gap: 0;
         justify-content: space-between;
@@ -957,6 +977,10 @@ footer {
                 height: 450px;
             }
         }
+    }
+
+    footer .footer .stroke {
+        width: 100%;
     }
 
     .medicalWrapper {
