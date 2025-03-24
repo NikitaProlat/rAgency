@@ -30,14 +30,14 @@
 
         <div class="banerWrapper">
             <div class="baner">
-                <h1>We’re a digital agancy</h1>
+                <h1>We’re a digital <br> agancy</h1>
                 <div class="pictures">
                     <div class="picture coffee"><img src="images/picture1Text.png" alt=""></div>
                     <div class="picture marketing"><img src="images/picture2Text.png" alt=""></div>
                     <div class="picture analyst"><img src="images/picture3Text.png" alt=""></div>
                     <div class="picture programmer"><img src="images/picture4Text.png" alt=""></div>
                     <div class="picture seo"><img src="images/picture5Text.png" alt=""></div>
-                    <div class="picture photographer"><img src="images/picture6Text.png" alt=""></div>
+                    <a href="about.html" class="picture photographer"><img src="images/picture6Text.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 </div>
     
                 <div class="designWrapper" id="cases">
-                    <a class="design">
+                    <a href="aboutSite.html" class="design">
                         <img src="images/design.png" alt="">
                         <h4>CLINIC <br> progress <br> web sites <br> 01 MAIN <br> 02 ABOUT <br> 03 INFO</h4>
                         <img class="arrow" src="images/arrowRight.png" alt="">
@@ -154,6 +154,7 @@
             </div>
             <div class="coupleThird">
                 <div class="smmWrapper">
+                    <img src="images/smm6.png" alt="">
                     <div class="smmSlider">
                         <button id="scrollRight2">
                             <img src="images/arrowRight.png" alt="">
@@ -252,10 +253,6 @@
                                 </div>
                                 <img src="images/share.svg" alt="">
                             </div>
-                        </div>
-
-                        <div class="slide extended">
-                            <img src="images/smm6.png" alt="">
                         </div>
 
                         <div class="slide">
@@ -494,13 +491,19 @@
             let scrollStep2 = 0;
             let transform2 = 0;
 
+            let gap2 = 32;
+
+            if (window.matchMedia("(max-width: 1700px)").matches) {
+                gap2 = 20;
+            }
+
             scrollRight2.onclick = () => {
                 if(scrollStep2 == smmListItems.length - 3) {
                     scrollStep2 = 0;
                     transform2 = 0;
                     smmList.style.transform = `translateX(0px)`;
                 }else {
-                    transform2 += smmListItems[scrollStep2].offsetWidth + 32;
+                    transform2 += smmListItems[scrollStep2].offsetWidth + gap2;
                     scrollStep2 += 1;
                     smmList.style.transform = `translateX(${transform2}px)`;
                 }

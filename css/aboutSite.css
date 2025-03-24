@@ -1,0 +1,74 @@
+.aboutSiteWrapper {
+  max-width: 1221px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 71px 0px 125px 0px;
+}
+.aboutSiteWrapper .aboutSite {
+  display: flex;
+  flex-direction: column;
+  gap: 87px;
+}
+.aboutSiteWrapper .aboutSite .description {
+  display: flex;
+  gap: 72px;
+}
+.aboutSiteWrapper .aboutSite .description img {
+  width: 760px;
+}
+.aboutSiteWrapper .aboutSite .description .list {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding-top: 105px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row {
+  display: flex;
+  align-items: start;
+  gap: 53px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row h4 {
+  color: #FFF;
+  font-family: "Bebas Neue";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row .right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row .right ul li, .aboutSiteWrapper .aboutSite .description .list .row .right p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row .right.block {
+  position: relative;
+}
+.aboutSiteWrapper .aboutSite .description .list .row .right.block .blockItem {
+  position: absolute;
+  top: 38px;
+  width: calc(100% + 17px);
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, #A0BBF2 35%);
+  display: flex;
+  align-items: center;
+  left: -17px;
+}
+.aboutSiteWrapper .aboutSite .description .list .row .right.block .blockItem span {
+  color: #F13C20;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 16px */
+  padding-left: 17px;
+}/*# sourceMappingURL=aboutSite.css.map */

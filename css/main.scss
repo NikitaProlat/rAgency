@@ -95,6 +95,7 @@ header {
             left: 130px;
             top: 0;
             z-index: 2;
+            width: max-content;
         }
 
         .pictures {
@@ -138,6 +139,10 @@ header {
                     grid-column: 1/span 3;
                     grid-row: 2;
 
+                    &::after {
+                        border-radius: 1px 18px;
+                    }
+
                     img {
                         top: 203px;
                         right: 21px;
@@ -151,6 +156,10 @@ header {
                     grid-column: 1;
                     grid-row: 3;
 
+                    &::after {
+                        border-radius: 18px 1px 18px 18px;
+                    }
+
                     img {
                         top: 42px;
                         left: 15px;
@@ -163,6 +172,10 @@ header {
                     height: 236px;
                     grid-column: 1;
                     grid-row: 4;
+                    
+                    &::after {
+                        border-radius: 18px;
+                    }
 
                     img {
                         top: 91px;
@@ -177,6 +190,10 @@ header {
                     grid-column: 2;
                     grid-row: 3/span 4;
 
+                    &::after {
+                        border-radius: 1px 1px 18px 18px;
+                    }
+
                     img {
                         top: 260px;
                         left: 20px;
@@ -190,6 +207,10 @@ header {
                     grid-column: 3;
                     grid-row: 3/span 4;
 
+                    &::after {
+                        border-radius: 1px 1px 18px 18px;
+                    }
+
                     img {
                         top: 358px;
                         left: 15px;
@@ -202,6 +223,10 @@ header {
                     height: 868px;
                     grid-column: 4;
                     grid-row: 1/span 4;
+
+                    &::after {
+                        border-radius: 18px 18px 1px 1px;
+                    }
 
                     img {
                         top: 564px;
@@ -550,9 +575,10 @@ header {
     margin-top: 200px;
     display: flex;
     justify-content: end;
+    gap: 48px;
 
     .smmSlider {
-        max-width: 1464px;
+        max-width: 1122px;
         width: 100%;
         overflow-x: hidden;
         position: relative;
@@ -841,7 +867,7 @@ footer {
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-150%);
+        transform: translateX(-200%);
     }
 }
 
@@ -934,7 +960,7 @@ footer {
     }
 
     .smmWrapper .smmSlider {
-        max-width: 1110px;
+        max-width: 800px;
     }
 
     .smmWrapper .smmSlider .smmList {

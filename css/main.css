@@ -85,6 +85,8 @@ header .header .nav a:hover {
   left: 130px;
   top: 0;
   z-index: 2;
+  width: -moz-max-content;
+  width: max-content;
 }
 .banerWrapper .baner .pictures {
   display: grid;
@@ -123,6 +125,9 @@ header .header .nav a:hover {
   grid-column: 1/span 3;
   grid-row: 2;
 }
+.banerWrapper .baner .pictures .picture:nth-child(1)::after {
+  border-radius: 1px 18px;
+}
 .banerWrapper .baner .pictures .picture:nth-child(1) img {
   top: 203px;
   right: 21px;
@@ -133,6 +138,9 @@ header .header .nav a:hover {
   height: 213px;
   grid-column: 1;
   grid-row: 3;
+}
+.banerWrapper .baner .pictures .picture:nth-child(2)::after {
+  border-radius: 18px 1px 18px 18px;
 }
 .banerWrapper .baner .pictures .picture:nth-child(2) img {
   top: 42px;
@@ -145,6 +153,9 @@ header .header .nav a:hover {
   grid-column: 1;
   grid-row: 4;
 }
+.banerWrapper .baner .pictures .picture:nth-child(3)::after {
+  border-radius: 18px;
+}
 .banerWrapper .baner .pictures .picture:nth-child(3) img {
   top: 91px;
   left: 17px;
@@ -155,6 +166,9 @@ header .header .nav a:hover {
   height: 524px;
   grid-column: 2;
   grid-row: 3/span 4;
+}
+.banerWrapper .baner .pictures .picture:nth-child(4)::after {
+  border-radius: 1px 1px 18px 18px;
 }
 .banerWrapper .baner .pictures .picture:nth-child(4) img {
   top: 260px;
@@ -167,6 +181,9 @@ header .header .nav a:hover {
   grid-column: 3;
   grid-row: 3/span 4;
 }
+.banerWrapper .baner .pictures .picture:nth-child(5)::after {
+  border-radius: 1px 1px 18px 18px;
+}
 .banerWrapper .baner .pictures .picture:nth-child(5) img {
   top: 358px;
   left: 15px;
@@ -177,6 +194,9 @@ header .header .nav a:hover {
   height: 868px;
   grid-column: 4;
   grid-row: 1/span 4;
+}
+.banerWrapper .baner .pictures .picture:nth-child(6)::after {
+  border-radius: 18px 18px 1px 1px;
 }
 .banerWrapper .baner .pictures .picture:nth-child(6) img {
   top: 564px;
@@ -465,9 +485,10 @@ header .header .nav a:hover {
   margin-top: 200px;
   display: flex;
   justify-content: end;
+  gap: 48px;
 }
 .smmWrapper .smmSlider {
-  max-width: 1464px;
+  max-width: 1122px;
   width: 100%;
   overflow-x: hidden;
   position: relative;
@@ -713,7 +734,7 @@ footer .footer .menu .nav hr {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-200%);
   }
 }
 @media screen and (max-width: 1400px) {
@@ -775,7 +796,7 @@ footer .footer .menu .nav hr {
     gap: 20px;
   }
   .smmWrapper .smmSlider {
-    max-width: 1110px;
+    max-width: 800px;
   }
   .smmWrapper .smmSlider .smmList {
     gap: 20px;

@@ -1,0 +1,88 @@
+
+
+
+.aboutSiteWrapper {
+    max-width: 1221px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 71px 0px 125px 0px;
+
+    .aboutSite {
+        display: flex;
+        flex-direction: column;
+        gap: 87px;
+
+        .description {
+            display: flex;
+            gap: 72px;
+
+            img {
+                width: 760px;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                gap: 44px;
+                padding-top: 105px;
+
+                .row {
+                    display: flex;
+                    align-items: start;
+                    gap: 53px;
+
+                    h4 {
+                        color: #FFF;
+                        font-family: "Bebas Neue";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.64px;
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 28px;
+
+                        ul li, p {
+                            color: #FFF;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 0.32px;
+                        }
+
+                        &.block {
+                           position: relative;
+                           
+                            .blockItem {
+                                position: absolute;
+                                top: 38px;
+                                width: calc(100% + 17px);
+                                height: 100%;
+                                background: linear-gradient(to bottom, #ffffff00 2%, #A0BBF2 35%);
+                                display: flex;
+                                align-items: center;
+                                left: -17px;
+                                
+                                span {
+                                    color: #F13C20;
+                                    font-family: Montserrat;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 100%; /* 16px */
+                                    padding-left: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

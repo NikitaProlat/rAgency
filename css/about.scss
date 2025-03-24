@@ -1,0 +1,151 @@
+
+
+header {
+    .header {
+        max-width: 1221px;
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.aboutPersonWrapper {
+    max-width: 1221px;
+    padding: 54px 0px 243px 0px;
+    width: 100%;
+    margin: 0 auto;
+    
+    .aboutPerson {
+        display: flex;
+        gap: 57px;
+
+        .leftContent {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            img {
+                width: 387px;
+                
+            }
+
+            .keys {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 416px;
+
+                span {
+                    color: #FFF;
+                    font-family: "Bebas Neue";
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.64px;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #FFF;
+                }
+            }
+        }
+
+        .rightContent {
+            display: flex;
+            gap: 29px;
+
+            .description {
+                padding-top: 31px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                width: 687px;
+
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    h2 {
+                        color: #FFF;
+                        font-family: "Bebas Neue";
+                        font-size: 64px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%; /* 64px */
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 128.411%; /* 20.546px */
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    flex-direction: column;
+
+                    h4 {
+                        color: #0F1B2B;
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                    }
+
+                    ul {
+                        margin-left: 30px;
+                        li,a {
+                            color: #0F1B2B;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+    
+                            p {
+                                color: #0F1B2B;
+                                font-family: Montserrat;
+                                font-size: 16px;
+                                font-style: italic;
+                                font-weight: 500;
+                                line-height: 140%;
+                            }
+                        }
+                    }
+                    
+
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            color: #0F1B2B;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//foter
+footer {
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+}
