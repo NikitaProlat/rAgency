@@ -466,98 +466,62 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             const photoList = document.getElementById("photoList");
-
-            let isDragging = false;
-            let startX = 0;
-            let scrollLeft = 0;
-
-            photoList.addEventListener("mousedown", (e) => {
-                isDragging = true;
-                startX = e.clientX;
-                scrollLeft = photoList.scrollLeft;
-                photoList.style.cursor = "grabbing";
-            });
-
-            photoList.addEventListener("mouseup", () => {
-                isDragging = false;
-                photoList.style.cursor = "grab";
-            });
-
-            photoList.addEventListener("mouseleave", () => {
-                isDragging = false;
-            });
-
-            photoList.addEventListener("mousemove", (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                const deltaX = e.clientX - startX;
-                photoList.scrollLeft = scrollLeft - deltaX;
-            });
-
-            // === Поддержка тач-скролла ===
-            photoList.addEventListener("touchstart", (e) => {
-                isDragging = true;
-                startX = e.touches[0].clientX;
-                scrollLeft = photoList.scrollLeft;
-            });
-
-            photoList.addEventListener("touchend", () => {
-                isDragging = false;
-            });
-
-            photoList.addEventListener("touchmove", (e) => {
-                if (!isDragging) return;
-                const deltaX = e.touches[0].clientX - startX;
-                photoList.scrollLeft = scrollLeft - deltaX;
-            });
-
-            
-
             const smmList = document.getElementById("smmList");
 
-let isDragging2 = false;
-let startX2 = 0;
-let scrollLeft2 = 0;
+            function enableSmoothScroll(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-smmList.addEventListener("mousedown", (e) => {
-    isDragging2 = true;
-    startX2 = e.clientX;
-    scrollLeft2 = smmList.scrollLeft;  // Используй scrollLeft, а не scrollLeft2
-    smmList.style.cursor = "grabbing";
-});
+    let lastX = 0;
+    let isHovering = false;
 
-smmList.addEventListener("mouseup", () => {
-    isDragging2 = false;
-    smmList.style.cursor = "grab";
-});
+    function handleMouseMove(e) {
+        if (!isHovering) return;
 
-smmList.addEventListener("mouseleave", () => {
-    isDragging2 = false;
-});
+        const deltaX = e.clientX - lastX;
+        lastX = e.clientX;
 
-smmList.addEventListener("mousemove", (e) => {
-    if (!isDragging2) return;
-    e.preventDefault();
-    const deltaX = e.clientX - startX2;
-    smmList.scrollLeft = scrollLeft2 - deltaX;  // Используй scrollLeft, а не scrollLeft2
-});
+        requestAnimationFrame(() => {
+            container.scrollLeft -= deltaX * 1.5;
+        });
+    }
 
-// === Поддержка тач-скролла ===
-smmList.addEventListener("touchstart", (e) => {
-    isDragging2 = true;
-    startX2 = e.touches[0].clientX;
-    scrollLeft2 = smmList.scrollLeft;  // Используй scrollLeft, а не scrollLeft2
-});
+    container.addEventListener("mouseenter", (e) => {
+        isHovering = true;
+        lastX = e.clientX;
+    });
 
-smmList.addEventListener("touchend", () => {
-    isDragging2 = false;
-});
+    container.addEventListener("mouseleave", () => {
+        isHovering = false;
+    });
 
-smmList.addEventListener("touchmove", (e) => {
-    if (!isDragging2) return;
-    const deltaX = e.touches[0].clientX - startX2;
-    smmList.scrollLeft = scrollLeft2 - deltaX;  // Используй scrollLeft, а не scrollLeft2
-});
+    container.addEventListener("mousemove", (e) => {
+        if (isHovering) handleMouseMove(e);
+    });
+
+    // === Поддержка тач-скролла ===
+    container.addEventListener("touchstart", (e) => {
+        lastX = e.touches[0].clientX;
+    });
+
+    container.addEventListener("touchmove", (e) => {
+        if (e.touches.length > 0) {
+            const touch = e.touches[0];
+            const deltaX = touch.clientX - lastX;
+            lastX = touch.clientX;
+
+            requestAnimationFrame(() => {
+                container.scrollLeft -= deltaX * 1.5;
+            });
+        }
+    });
+}
+
+// Подключаем к обоим блокам
+enableSmoothScroll("photoList");
+enableSmoothScroll("smmList");
+
+
 
 
             for(let i of document.getElementsByClassName("shape")) {
