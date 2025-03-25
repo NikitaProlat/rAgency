@@ -668,6 +668,23 @@
     <script>
 
         document.addEventListener("DOMContentLoaded", () => {
+
+            const paragraphs = document.querySelectorAll(".description p");
+                const dots = document.querySelectorAll(".dots img");
+                
+                paragraphs.forEach((p, index) => {
+                    p.addEventListener("mouseenter", () => {
+                        moveWhiteDot(index);
+                    });
+                });
+
+                function moveWhiteDot(index) {
+                    dots.forEach(dot => dot.src = "images/blueDot.svg"); // Сбрасываем все точки
+                    dots[index].src = "images/whiteDot.svg"; // Делаем белой ту, что соответствует абзацу
+                }
+
+
+
             for(let i of document.getElementsByClassName("shape")) {
                 i.onclick = () => {
                     i.classList.add("clicked");

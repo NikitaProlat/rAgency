@@ -346,7 +346,7 @@ header .header .nav a:hover {
   display: flex;
   gap: 32px;
   flex-direction: row-reverse;
-  animation: slider2 20s linear infinite;
+  animation: slider2 40s linear infinite;
 }
 .photoWrapper .photoSlider .photoList img {
   -webkit-user-select: none;
@@ -530,7 +530,7 @@ header .header .nav a:hover {
   flex-direction: row-reverse;
   gap: 32px;
   height: 518px;
-  animation: slider3 20s linear infinite;
+  animation: slider3 40s linear infinite;
 }
 
 @keyframes slider3 {
@@ -730,7 +730,7 @@ footer .footer .partnersSlider .partnersList {
   display: flex;
   gap: 60px;
   align-items: center;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 footer .footer .partnersSlider .partnersList::after {
   content: "";
