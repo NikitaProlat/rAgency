@@ -345,14 +345,8 @@ header .header .nav a:hover {
 .photoWrapper .photoSlider .photoList {
   display: flex;
   gap: 32px;
-  cursor: grab;
   flex-direction: row-reverse;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  animation: slider2 20s linear infinite;
 }
 .photoWrapper .photoSlider .photoList img {
   -webkit-user-select: none;
@@ -361,6 +355,14 @@ header .header .nav a:hover {
   pointer-events: none;
 }
 
+@keyframes slider2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(3750px);
+  }
+}
 .designWrapper {
   display: flex;
   justify-content: end;
@@ -528,15 +530,17 @@ header .header .nav a:hover {
   flex-direction: row-reverse;
   gap: 32px;
   height: 518px;
-  cursor: grab;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  animation: slider3 20s linear infinite;
 }
 
+@keyframes slider3 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(2540px);
+  }
+}
 .slide {
   height: -moz-max-content;
   height: max-content;
@@ -704,11 +708,15 @@ header .header .nav a:hover {
 }
 
 footer {
-  padding: 59px 107px;
   background: #FFF;
   box-shadow: 0px -4px 8px 0px #98A5C0;
+  display: flex;
+  justify-content: center;
 }
 footer .footer {
+  padding: 59px 107px;
+  max-width: 1920px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 55px;
