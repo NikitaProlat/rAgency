@@ -360,7 +360,7 @@ header .header .nav a:hover {
     transform: translateX(0);
   }
   to {
-    transform: translateX(3750px);
+    transform: translateX(3740px);
   }
 }
 .designWrapper {
